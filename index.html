@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Undangan Andi & Siti</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<audio id="weddingMusic" loop>
+    <source src="music/lagu.mp3" type="audio/mpeg">
+</audio>
+<button id="musicButton" class="music-button">
+    🎵
+</button>
+    <!-- COVER -->
+
+    <section class="cover">
+
+        <div class="subtitle">
+            THE WEDDING
+        </div>
+
+        <h1 id="coupleNames"></h1>
+
+        <div class="date" id="weddingDate"></div>
+
+        <button id="openInvitation" class="button">
+    Buka Undangan
+</button>
+
+<div class="guest">
+
+    <p>
+        Kepada Yth.
+    </p>
+
+    <h3 id="guestName">
+        Tamu Undangan
+    </h3>
+
+</div>
+
+    </section>
+
+
+    <!-- PEMBUKAAN -->
+
+    <section class="opening" id="mainContent">
+
+        <h2>
+            Assalamu'alaikum
+        </h2>
+
+        <p>
+            Dengan memohon rahmat dan ridho Allah SWT,
+            kami bermaksud mengundang Bapak/Ibu/Saudara
+            untuk hadir dalam acara pernikahan kami.
+        </p>
+
+    </section>
+
+
+    <!-- MEMPELAI -->
+
+    <section class="couple">
+
+        <h2>
+            Mempelai
+        </h2>
+
+        <div class="couple-container">
+
+            <div class="person">
+
+                <img src="images/pengantin-pria.png" class="photo">
+
+                <h3 id="groomName"></h3>
+
+                <p>
+                    Putra dari<br>
+                    Bapak Ahmad & Ibu Siti
+                </p>
+
+            </div>
+
+
+            <div class="person">
+
+                <img src="images/pengantin-wanita.png" class="photo">
+
+                <h3 id="brideName"></h3>
+
+                <p>
+                    Putri dari<br>
+                    Bapak Budi & Ibu Ani
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACARA -->
+
+    <section class="event">
+
+        <h2>
+            Waktu & Tempat
+        </h2>
+
+
+        <div class="event-container">
+
+
+            <div class="event-box">
+
+                <h3>
+                    Akad Nikah
+                </h3>
+
+                <p id="akadDate"></p>
+                <p id="akadTime"></p>
+                <p id="venue"></p>
+                <p id="city"></p>
+
+            </div>
+
+
+            <div class="event-box">
+
+                <h3>
+                    Resepsi
+                </h3>
+
+                <p>
+                    Minggu<br>
+                    20 Desember 2026
+                </p>
+
+                <p>
+                    11.00 WIB
+                </p>
+
+                <p>
+                    Gedung Serbaguna
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- COUNTDOWN -->
+
+    <section class="countdown">
+
+    <h2>
+        Menuju Hari Bahagia
+    </h2>
+
+    <div class="countdown-container">
+
+        <div class="time-box">
+            <span id="days">0</span>
+            <small>HARI</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">0</span>
+            <small>JAM</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">0</span>
+            <small>MENIT</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">0</span>
+            <small>DETIK</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- GALERI -->
+
+    <section class="gallery">
+
+        <h2>
+            Galeri
+        </h2>
+
+        <div class="gallery-container">
+
+            <img src="images/foto1.jpg" class="gallery-photo">
+            <img src="images/foto2.jpg" class="gallery-photo">
+            <img src="images/foto3.jpg" class="gallery-photo">
+            <img src="images/foto4.jpg" class="gallery-photo">
+
+        </div>
+
+    </section>
+
+    <!-- RSVP -->
+
+<section class="rsvp">
+
+    <h2>
+        RSVP
+    </h2>
+
+    <p>
+        Konfirmasi kehadiran Anda
+    </p>
+
+
+    <form id="rsvpForm">
+
+        <label for="name">
+            Nama Tamu
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Masukkan nama Anda"
+            required
+        >
+
+
+        <label>
+            Kehadiran
+        </label>
+
+        <div class="attendance">
+
+            <label>
+                <input
+                    type="radio"
+                    name="attendance"
+                    value="Hadir"
+                    required
+                >
+                Hadir
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="attendance"
+                    value="Tidak Hadir"
+                >
+                Tidak Hadir
+            </label>
+
+        </div>
+
+
+        <label for="guests">
+            Jumlah Tamu
+        </label>
+
+        <input
+            type="number"
+            id="guests"
+            min="1"
+            max="10"
+            value="1"
+            required
+        >
+
+
+        <button type="submit">
+            Kirim RSVP
+        </button>
+
+    </form>
+
+<div id="successPopup" class="popup">
+
+    <div class="popup-content">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Terima Kasih
+        </h2>
+
+        <p id="successMessage">
+            RSVP Anda berhasil dikirim.
+        </p>
+
+        <button id="closePopup">
+            Tutup
+        </button>
+
+    </div>
+
+</div>
+</section>
+
+    <!-- PENUTUP -->
+
+    <section class="closing">
+
+        <h2>
+            Terima Kasih
+        </h2>
+
+        <p>
+            Merupakan suatu kehormatan bagi kami
+            apabila Bapak/Ibu/Saudara berkenan hadir.
+        </p>
+
+        <p>
+            Andi & Siti
+        </p>
+
+    </section>
+
+<script src="js/data.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
