@@ -133,6 +133,11 @@ openButton.addEventListener("click", function() {
     gallery.style.animation = "fadeIn 1s ease";
     closing.style.animation = "fadeIn 1s ease";
 
+    const dotNav = document.getElementById("dotNav");
+    if (dotNav) {
+        dotNav.classList.add("show");
+    }
+
     musicButton.addEventListener("click", function() {
 
     if (music.paused) {
@@ -194,4 +199,30 @@ closePopup.addEventListener("click", function() {
 
 });
 
+});
+
+// ===== DOT NAVIGATION: highlight titik aktif sesuai section yang terlihat =====
+const navSections = document.querySelectorAll(
+    "#nav-couple, #nav-event, #nav-countdown, #nav-gallery, #nav-rsvp, #nav-closing"
+);
+const navDots = document.querySelectorAll(".dot-nav .dot");
+
+const navObserver = new IntersectionObserver(
+    function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                navDots.forEach(function (dot) {
+                    dot.classList.remove("active");
+                    if (dot.dataset.target === entry.target.id) {
+                        dot.classList.add("active");
+                    }
+                });
+            }
+        });
+    },
+    { threshold: 0.5 }
+);
+
+navSections.forEach(function (section) {
+    navObserver.observe(section);
 });
